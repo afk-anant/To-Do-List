@@ -6,7 +6,7 @@ function App() {
   const [text, setText] = useState("");
 
   function addTask() {
-    if (text !== "") {
+    if (text.trim() !== "") {
       setTasks([...tasks, text]);
       setText("");
     }
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="container">
-      <h2>📝 To-Do List</h2>
+      <h2>To-Do List</h2>
       <div className="input">
         <input
           type="text"
